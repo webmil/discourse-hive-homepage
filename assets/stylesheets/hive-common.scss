@@ -1,0 +1,75 @@
+#hive-outlet {
+  opacity: 0;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.ready {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+}
+
+.hive-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.hive-col {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  &:last-child { padding-right: none; }
+}
+
+.hive-h2 {
+  display: block;
+  padding: 30px 10px 30px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 800;
+  color: rgba($hive-white-color, .7);
+}
+
+.hive-h3 {
+  display: block;
+  text-align: center;
+  padding: 50px 10px 30px 0px;
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 800;
+  color: rgba($hive-white-color, .7);
+}
+
+.hive-gradient {
+  position: relative;
+
+  background: linear-gradient(
+    0deg,
+    rgba($hive-secondary-color,  0) 0%,
+    rgba($hive-secondary-color, .05) 20%,
+    rgba($hive-light-color,      .4) 50%,
+    rgba($hive-secondary-color, .05) 80%,
+    rgba($hive-secondary-color,  0) 100%
+  );
+
+  padding: 100px 0;
+  margin-top: 100px;
+
+  .hive-h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+.hive-main-row {
+  margin-top: 130px;
+}

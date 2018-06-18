@@ -1,0 +1,7 @@
+plugins:
+  hive_homepage_enabled:
+    default: true
+    client: true
+  hive_homepage_img_url:
+    default: '/images/hive-main-pic.png'
+    client: true

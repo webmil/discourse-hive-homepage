@@ -1,0 +1,171 @@
+.hive-topic-list {
+  // text-align: right;
+  .hive-row {
+    display: flex;
+  }
+  .hive-topic {
+    display: flex;
+    position: relative;
+    padding: 12px 5px 12px 0;
+    border-bottom: 1px solid rgba($hive-white-color, 0.2);
+    justify-content: flex-end;
+
+    h4 a {
+      font-size: 18px;
+    }
+
+    &:last-child { border-bottom: none; }
+
+    .hive-topic__col {
+      display: flex;
+      padding: 0 10px;
+      align-items: center;
+      &--title {
+        flex-direction: column;
+        align-items: baseline;
+        width: 100%;
+      }
+      &--posters {
+        a {
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          img {
+            width: 25px;
+            height: auto;
+          }
+        }
+      }
+
+      &--age, &--count {
+        color: rgba($hive-white-color, .5);
+      }
+
+
+    }
+
+    &__title {
+      display: block;
+      vertical-align: middle;
+      text-align: left;
+      margin-bottom: 0;
+
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        color: $hive-white-color;
+        &:hover {
+          color: $hive-primary-color;
+          transition: color 0.1s ease-in;
+        }
+      }
+
+    }
+
+    &__tags, &__desc {
+      text-align: left;
+      color: rgba($hive-white-color, .65);
+      font-weight: 100;
+      padding: 6px 0;
+      &:hover {
+        &, a {
+          color: rgba($hive-white-color, 1);
+        }
+      }
+    }
+
+    &__posters {
+
+    }
+
+    &__age {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      text-align: center;
+      color: rgba($hive-white-color, .55);
+    }
+
+  }
+}
+
+.hive-topic-list--latest {
+
+  .hive-topic {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: none;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background: $hive-gray-color;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px;
+    overflow: hidden;
+
+    &:hover {
+      color: $hive-gray-color;
+      background: linear-gradient(
+        160deg,
+        $hive-primary-helper-color 0%,
+        $hive-primary-color 100%
+      );
+      a {
+        color: $hive-gray-color;
+        &:hover {
+          color: black;
+        }
+      }
+      .hive-topic {
+        &__tags, &__age, &__info span {
+          color: $hive-gray-color;
+        }
+        &__age {
+          text-align: left;
+        }
+      }
+    }
+
+    .hive-row--main {
+      height: 100%;
+    }
+
+    .hive-row--info {
+      justify-content: space-between;
+    }
+
+    &__info {
+      width: 100%;
+      text-align: right;
+      span {
+        color: rgba($hive-white-color, .5);
+        margin-right: 10px;
+        &:last-child { margin-right: 0px}
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .hive-topic__col {
+      &--avatar {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 0;
+
+        img {
+          width: 60px;
+        }
+      }
+    }
+
+    &__age {
+      text-align: left;
+    }
+
+  }
+}

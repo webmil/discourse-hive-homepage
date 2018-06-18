@@ -1,0 +1,13 @@
+$hive-primary-color: #ffed0a;
+$hive-primary-helper-color: #F8C959;
+$hive-secondary-color: #35DAAF;
+$hive-dark-color: #563B59;
+$hive-light-color: #C559DB;
+$hive-gray-color: #363636;
+$hive-white-color: white;
+
+@import "./hive-global";
+@import "./hive-btn";
+@import "./hive-header";
+@import "./hive-topic";
+@import "./hive-common";
