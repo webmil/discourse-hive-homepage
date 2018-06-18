@@ -3,3 +3,4 @@ PLUGIN_NAME = "hive_homepage".freeze
 
 register_asset "stylesheets/hive-homepage-base.scss"
 register_asset "javascripts/hive-homepage-base.js"
+register_asset "javascripts/helpers/eq-helper.js.es6"
