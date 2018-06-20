@@ -26,8 +26,6 @@ var renderTopicList = function (type, parentDomId, json) {
       age = '1h'
     } else if (delta < day) {
       age = Math.floor(delta / hour) + 'h';
-    } else if (delta < week) {
-      r
     } else if (delta < year) {
       age = Math.floor(delta / day) + 'd';
     } else if (delta > year) {
