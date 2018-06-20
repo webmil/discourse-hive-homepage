@@ -3,5 +3,5 @@ plugins:
     default: true
     client: true
   hive_homepage_img_url:
-    default: '/images/hive-main-pic.png'
+    default: '/images/hive-intro.svg'
     client: true

@@ -27,8 +27,7 @@ var renderTopicList = function (type, parentDomId, json) {
     } else if (delta < week) {
       age = Math.floor(delta / day) + 'd';
     } else if (delta < year) {
-      // TODO: fix
-      age = lastPostedAt;
+      age = Math.floor(delta / day) + 'd';
     } else if (delta > year) {
       age = Math.floor(delta / year) + 'y';
     }
@@ -43,6 +42,9 @@ var renderTopicList = function (type, parentDomId, json) {
   }
 
   var renderTopicTags = function (topic) {
+    if (topic.tags == undefined) {
+      return '';
+    }
     var tags = [];
     topic.tags.forEach(function(tag) {
       tags.push("<a href='/tags/" + tag +  "' class='discourse-tag simple'>" + tag + "</a>")
@@ -82,35 +84,6 @@ var renderTopicList = function (type, parentDomId, json) {
       "</div>" +
     "</div>";
   }
-
-  // <div class="post">
-  //   <div class="post-shadow clearfix">
-  //     <div class="image-section">
-  //       <img src="/user_avatar/experts.feverbee.com/jacobwinter/370/617_1.png" class="teammember-img">
-  //     </div>
-  //     <div class="post-title">
-  //       <div class="post-name">
-  //         <a href="/">Problem with 1050ti on ETH</a>
-  //       </div>
-  //       <div class="post-category">
-  //         <a href="/">AMD cards</a>
-  //       </div>
-  //     </div>
-  //     <div class="post-info clearfix">
-  //       <div class="post-date">
-  //         <span>June 4</span>
-  //       </div>
-  //       <div class="post-comments">
-  //         <a href="/">
-  //           <span class="comments"><i class="fa fa-comments"></i>12</span>
-  //         </a>
-  //         <a href="/">
-  //           <span class="reviews"><i class="fa fa-eye"></i>103</span>
-  //         </a>
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>
 
   var renderNewTopic = function (topic) {
 

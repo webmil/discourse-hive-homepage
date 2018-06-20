@@ -6,17 +6,30 @@
     rgba($hive-secondary-color,  0) 90%
   );
   padding-top: 140px;
+  .wrap {
+    display: flex;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column-reverse;
+    }
+  }
 
   &__title {
     width: 35%;
-    float: left;
     opacity: 0.95;
+
+    @media screen and (max-width: $break-small) {
+      width: 100%;
+    }
 
     h2 {
       font-size: 36px;
       line-height: 40px;
       color: $hive-white-color;
       padding: 25px 0;
+
+      @media screen and (max-width: $break-small) {
+        font-size: 28px;
+      }
     }
     p {
       font-size: 1.2em;
@@ -28,8 +41,14 @@
   }
 
   &__img {
-    float: right;
     width: 65%;
+    @media screen and (max-width: $break-small) {
+      display:none;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
     text-align: right;
   }
 }
