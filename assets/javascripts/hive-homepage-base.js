@@ -2,7 +2,9 @@ var renderTopicList = function (type, parentDomId, json) {
   var parentContainer = $(parentDomId);
 
   var renderTopicAge = function (topic) {
-    var lastPostedAt = Date.parse(topic.last_posted_at);
+    var lastPostedAtString = topic.last_posted_at || topic.created_at;
+
+    var lastPostedAt = Date.parse(lastPostedAtString);
 
     var delta = Math.round((+new Date - lastPostedAt) / 1000);
 
@@ -25,7 +27,7 @@ var renderTopicList = function (type, parentDomId, json) {
     } else if (delta < day) {
       age = Math.floor(delta / hour) + 'h';
     } else if (delta < week) {
-      age = Math.floor(delta / day) + 'd';
+      r
     } else if (delta < year) {
       age = Math.floor(delta / day) + 'd';
     } else if (delta > year) {
