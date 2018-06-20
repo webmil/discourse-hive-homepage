@@ -6,6 +6,10 @@ $hive-light-color: #C559DB;
 $hive-gray-color: #363636;
 $hive-white-color: white;
 
+$break-mobile: 400px;
+$break-small: 900px;
+$break-large: 1200px;
+
 @import "./hive-global";
 @import "./hive-btn";
 @import "./hive-header";
