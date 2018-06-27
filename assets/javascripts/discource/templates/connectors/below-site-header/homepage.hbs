@@ -1,50 +1,49 @@
 {{#if siteSettings.hive_homepage_enabled}}
   {{#if (eq currentPath "discovery.latest")}}
-    {{#if currentUser}}
-    {{else}}
-      <div class="hive">
-          <div class="hive-header">
-            <div class="wrap">
-              <div class="hive-header__title">
-                <h2>Online community with ideas</h2>
-                <p>Swap tips and ideas with your peers to build community for your members, your company, and your career</p>
-                <a href="/signup" class="hive-btn">Create account</a>
-              </div>
-              <div class="hive-header__img">
-                <img src="{{ siteSettings.hive_homepage_img_url }}" alt="Hive community intro">
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div id="hive-outlet" class="hive hidden">
-
-        <div class="hive-main-row">
+    <div class="hive">
+        <div class="hive-header">
           <div class="wrap">
-            <div class="hive-row">
-
-              <div class="hive-col">
-                <h3 class="hive-h2">Hot discussions</h3>
-                <div class="hive-topic-list" id="hive-topic-list--hot"></div>
-                <a href="/hot" class="hive-btn">More discussions</a>
-              </div>
-
-              <div class="hive-col">
-                <h3 class="hive-h2">Categories</h3>
-                <div class="hive-topic-list" id="hive-topic-list--categories"></div>
-                <a href="/categories" class="hive-btn">More categories</a>
-              </div>
+            <div class="hive-header__title">
+              <h2>{{ siteSettings.header_title }}</h2>
+              <p>{{ siteSettings.header_text }}</p>
+              {{#if currentUser}}
+              {{else}}
+                <a href="/signup" class="hive-btn">Create account</a>
+              {{/if}}
+            </div>
+            <div class="hive-header__img">
+              <img src="{{ siteSettings.hive_homepage_img_url }}" alt="Hive community intro">
             </div>
           </div>
         </div>
+    </div>
 
-        <div class="hive-gradient">
-          <h2 class="hive-h3"> Can you help this people?</h2>
-          <div class="hive-topic-list  hive-topic-list--latest" id="hive-topic-list--latest"></div>
+    <div id="hive-outlet" class="hive hidden">
+
+      <div class="hive-main-row">
+        <div class="wrap">
+          <div class="hive-row">
+
+            <div class="hive-col">
+              <h3 class="hive-h2">Hot discussions</h3>
+              <div class="hive-topic-list" id="hive-topic-list--hot"></div>
+              <a href="/hot" class="hive-btn">More discussions</a>
+            </div>
+
+            <div class="hive-col">
+              <h3 class="hive-h2">Categories</h3>
+              <div class="hive-topic-list" id="hive-topic-list--categories"></div>
+              <a href="/categories" class="hive-btn">More categories</a>
+            </div>
+          </div>
         </div>
-
       </div>
 
-    {{/if}}
+      <div class="hive-gradient">
+        <h2 class="hive-h3"> Can you help this people?</h2>
+        <div class="hive-topic-list  hive-topic-list--latest" id="hive-topic-list--latest"></div>
+      </div>
+
+    </div>
   {{/if}}
 {{/if}}

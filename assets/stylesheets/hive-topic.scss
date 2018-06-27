@@ -92,11 +92,11 @@
 
 .hive-topic-list--latest {
   .wrap {
-    align-items: flex-start;
+    display: block;
   }
 
   .hive-topic {
-    display: inline-flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: flex-start;
     border-bottom: none;
@@ -169,7 +169,7 @@
     &__age {
       text-align: left;
     }
-    
+
     @media screen and (max-width: $break-large) {
       width: 100%;
       margin: 10px 0;
