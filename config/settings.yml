@@ -5,3 +5,9 @@ plugins:
   hive_homepage_img_url:
     default: '/images/hive-intro.svg'
     client: true
+  header_title:
+    default: 'Online community with'
+    client: true
+  header_text:
+    default: 'Swap tips and ideas with your peers to build community for your members, your company, and your career'
+    client: true
