@@ -2,5 +2,5 @@ en:
   site_settings:
     hive_homepage_enabled:: 'Enable hive homepage?'
     hive_homepage_img_url: 'Hive homepage main picture url'
-    header_title: 'Header title'
-    header_text: 'Header subtitle'
+    hive_homepage_header_title: 'Header title'
+    hive_homepage_header_text: 'Header subtitle'
